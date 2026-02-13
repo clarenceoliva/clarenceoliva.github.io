@@ -1017,7 +1017,10 @@ header {
     background: var(--white);
     padding: 2rem;
     border-radius: 15px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
     border: 1px solid var(--border-color);
@@ -1310,3 +1313,4 @@ footer {
         padding: 0.3rem 0.8rem;
     }
 }
+
