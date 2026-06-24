@@ -5,16 +5,16 @@
 }
 
 :root {
-    --primary-color: #2d3748;
-    --secondary-color: #3b82f6;
-    --accent-color: #06b6d4;
-    --text-color: #4a5568;
-    --light-bg: #f7fafc;
+    --primary-color: #e2e8f0;
+    --secondary-color: #60a5fa;
+    --accent-color: #38bdf8;
+    --text-color: #cbd5e1;
+    --light-bg: #070b16;
     --white: #ffffff;
-    --card-bg: #ffffff;
-    --border-color: #e2e8f0;
-    --gradient-1: #3b82f6;
-    --gradient-2: #06b6d4;
+    --card-bg: #0f172a;
+    --border-color: rgba(255, 255, 255, 0.12);
+    --gradient-1: #60a5fa;
+    --gradient-2: #38bdf8;
 }
 
 html {
@@ -49,15 +49,15 @@ body {
 
 /* Header & Navigation */
 header {
-    background: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(10px);
-    color: var(--primary-color);
+    background: rgba(10, 15, 35, 0.95);
+    backdrop-filter: blur(12px);
+    color: var(--white);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
-    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.45);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .nav-container {
@@ -123,7 +123,7 @@ header {
 }
 
 .nav-links a {
-    color: var(--primary-color);
+    color: var(--white);
     text-decoration: none;
     font-weight: 500;
     position: relative;
@@ -151,7 +151,7 @@ header {
 
 /* Hero Section */
 #hero {
-    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #111827 100%);
     color: var(--white);
     min-height: 100vh;
     display: flex;
@@ -204,6 +204,23 @@ header {
 .hero-content {
     position: relative;
     z-index: 1;
+}
+
+.hero-avatar {
+    margin: 0 auto 1.5rem;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.hero-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .hero-badge {
@@ -310,22 +327,22 @@ header {
 }
 
 .cta-button.primary {
-    background: var(--white);
-    color: var(--secondary-color);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    background: var(--secondary-color);
+    color: var(--white);
+    box-shadow: 0 12px 30px rgba(56, 189, 248, 0.25);
 }
 
 .cta-button.secondary {
-    background: transparent;
+    background: rgba(255, 255, 255, 0.08);
     color: var(--white);
-    border: 2px solid var(--white);
+    border: 2px solid rgba(255, 255, 255, 0.18);
     box-shadow: none;
 }
 
 .cta-button.download {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.08);
     color: var(--white);
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.18);
     backdrop-filter: blur(10px);
     box-shadow: none;
 }
@@ -370,9 +387,9 @@ header {
 
 /* Stats Section */
 #stats {
-    background: var(--white);
+    background: transparent;
     padding: 3rem 0;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 #stats .container {
@@ -457,7 +474,7 @@ header {
 
 /* About Section */
 #about {
-    background: var(--white);
+    background: transparent;
 }
 
 .about-content {
@@ -528,11 +545,11 @@ header {
 }
 
 .soft-skills {
-    background: var(--light-bg);
+    background: var(--card-bg);
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    border: 2px solid var(--border-color);
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     background-clip: padding-box;
     position: relative;
 }
@@ -573,7 +590,7 @@ header {
 
 /* Skills Section */
 #skills {
-    background: var(--light-bg);
+    background: transparent;
 }
 
 .skills-grid {
@@ -583,12 +600,12 @@ header {
 }
 
 .skill-card {
-    background: var(--white);
+    background: var(--card-bg);
     padding: 2rem;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.05);
     transition: all 0.3s ease;
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     position: relative;
     overflow: hidden;
     animation: slideInUp 0.6s ease-out backwards;
@@ -710,24 +727,24 @@ header {
 
 /* Projects Section */
 #projects {
-    background: var(--white);
+    background: transparent;
 }
 
 .project-card {
-    background: var(--white);
+    background: var(--card-bg);
     padding: 2rem;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.05);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border-top: 4px solid transparent;
-    background-image: linear-gradient(var(--white), var(--white)), 
+    background-image: linear-gradient(var(--card-bg), var(--card-bg)), 
                       linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
     background-origin: padding-box, border-box;
     background-clip: padding-box, border-box;
     position: relative;
     overflow: hidden;
     animation: fadeInScale 0.6s ease-out backwards;
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .project-card:nth-child(1) { animation-delay: 0.1s; }
@@ -835,7 +852,7 @@ header {
 
 /* Experience Section */
 #experience {
-    background: var(--light-bg);
+    background: transparent;
 }
 
 .experience-timeline {
@@ -855,12 +872,12 @@ header {
 }
 
 .experience-item {
-    background: var(--white);
+    background: var(--card-bg);
     padding: 2rem;
     border-radius: 15px;
     margin-bottom: 2rem;
     border-left: 5px solid var(--secondary-color);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.05);
     transition: all 0.3s ease;
     position: relative;
 }
@@ -916,7 +933,7 @@ header {
 
 /* Education Section */
 #education {
-    background: var(--white);
+    background: transparent;
 }
 
 .education-grid {
@@ -998,7 +1015,7 @@ header {
 
 /* Contact Section */
 #contact {
-    background: var(--light-bg);
+    background: transparent;
 }
 
 .contact-content {
@@ -1014,16 +1031,16 @@ header {
 }
 
 .contact-item {
-    background: var(--white);
+    background: var(--card-bg);
     padding: 2rem;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.05);
     transition: all 0.3s ease;
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     position: relative;
     overflow: hidden;
 }
@@ -1071,12 +1088,12 @@ header {
 }
 
 .reference-note {
-    background: var(--white);
+    background: var(--card-bg);
     padding: 2rem;
     border-radius: 15px;
     text-align: center;
     border: 2px solid transparent;
-    background-image: linear-gradient(var(--white), var(--white)), 
+    background-image: linear-gradient(var(--card-bg), var(--card-bg)), 
                       linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
     background-origin: padding-box, border-box;
     background-clip: padding-box, border-box;
